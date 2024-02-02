@@ -1,4 +1,4 @@
-name: 'Get Runner Public IP Addresses'
+name: 'Get Runner Public IP Address'
 description: 'Gets the public IPv4 and IPv6 addreses of the current runner using latest Node'
 inputs: {}
 outputs:
