@@ -1,0 +1,5 @@
+/tests
+jest.config.ts
+/dist
+vitest.config.mts
+/coverage

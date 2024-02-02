@@ -1,0 +1,51 @@
+{
+    "name": "get_runner_ip",
+    "version": "1.0.0",
+    "description": "Get the current Github Actions runner IP address",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "lint": "eslint . --ext .ts",
+        "test": "vitest --run --coverage",
+        "test:dev": "vitest",
+        "build": "ncc build src/run.ts -o dist",
+        "prepare": "husky",
+        "start:dev": "npx tsx src/run.ts"
+    },
+    "keywords": [
+        "github",
+        "actions",
+        "runner",
+        "ip",
+        "get"
+    ],
+    "author": "Bruno Lorenzo Candido",
+    "license": "MIT",
+    "homepage": "https://github.com/candidob/get_runner_ip#readme",
+    "repository": {
+        "type": "git",
+        "url": "git"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.11",
+        "@typescript-eslint/eslint-plugin": "^6.20.0",
+        "@vercel/ncc": "^0.38.1",
+        "@vitest/coverage-istanbul": "^1.2.2",
+        "@vitest/coverage-v8": "^1.2.2",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-config-standard-with-typescript": "^43.0.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "husky": "^9.0.7",
+        "nock": "^13.5.1",
+        "prettier": "3.2.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3",
+        "vitest": "^1.2.2"
+    },
+    "dependencies": {
+        "@actions/core": "^1.10.1"
+    }
+}

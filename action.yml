@@ -1,0 +1,14 @@
+name: 'Get Runner Public IP Addresses'
+description: 'Gets the public IPv4 and IPv6 addreses of the current runner using latest Node'
+inputs: {}
+outputs:
+    ipv4:
+        description: 'The IPv4 Address of the current Github Actions Runner'
+    ipv6:
+        description: 'The IPv6 Address of the current Github Actions Runner'
+runs:
+    using: 'node20'
+    main: 'dist/index.js'
+branding:
+    icon: 'code'
+    color: 'red'
