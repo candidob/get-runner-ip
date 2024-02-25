@@ -36,7 +36,7 @@ jobs:
         steps:
             - name: Get IP Addresses
               id: ip
-              uses: candidob@get-runner-ip@v1.0.0
+              uses: candidob/get-runner-ip@v1.0.0
 
             - name: See IP Addresses
               run: |
@@ -46,46 +46,46 @@ jobs:
 
 # Cases of use
 
-A very common use case and the reason for creating the project is blacklisting and whitelisting the IP addresses of GitHub Actions runners when actions like SSH command execution or altering certain configurations on cloud service providers such as AWS, Azure, GCP, among others, are needed. Through the interface provided by the cloud provider and the IP address, it is easy to allow GitHub Actions runners through a firewall or security group to perform protected operations.
+A common use case and the reason why this action was created is to aid in the deployment process of Docker images on services like AWS, Azure, GCP, among others. By obtaining the IP address of the runner executing a workflow, it can be allowed through a firewall or security group to perform operations such as executing commands via SSH or modifying configurations on a cloud service provider.
 
 # Project structure
 
 ```
-├── .github (Github Action for this project)
+├── .github (Github Action Workflow for this project)
 ├── .husky (Git hooks)
 ├── branding (Branding related folder)
 ├── dist
-    ├── index.js (Distributable file that Github Actions uses as the Action)
+    └── index.js (Distributable file that Github Actions uses as the Action)
 ├── src
-    ├── core
+    └── core
         ├── constants.ts (IP request API Endpoints URLs)
         ├── guards.ts (Type guards)
-        ├── types.ts (Type definitions)
+        └── types.ts (Type definitions)
     ├── libs
         ├── https.ts (HTTPS Get request function)
-        ├── ip.ts (IPv4 and IPv6 get functions)
-    ├── index.ts (main function)
-    ├── run.ts (main entrypoint of the Action)
-├── tests
+        └── ip.ts (IPv4 and IPv6 get functions)
+    ├── index.ts (Main function)
+    └── run.ts (Main entrypoint of the Action)
+└── tests
     ├── integration (Integration tests)
         ├── https.integration.tests.ts
-        ├── index.integration.tests.ts
-    ├── unit (Unit tests)
+        └── index.integration.tests.ts
+    └── unit (Unit tests)
         ├── guards.unit.test.ts
         ├── https.unit.test.ts
         ├── index.unit.test.ts
-        ├── ip.unit.test.ts
+        └── ip.unit.test.ts
 ```
 
 > Easily, the endpoints from which the IP addresses are obtained can be modified, some minor adjustments are necessary if the new API returns the IP in a different format than { ip: '127.0.0.1' }
 
 # Dependencies
 
--   @actions/core
+-   [@actions/core](https://www.npmjs.com/package/@actions/core)
 
 # Environment
 
--   Node latest
+-   Node 20
 
 # Contributions and license
 

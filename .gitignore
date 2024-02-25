@@ -3,3 +3,6 @@ node_modules
 
 # Ignore coverage
 coverage
+
+# Ignore JetBrains IDE files
+.idea
