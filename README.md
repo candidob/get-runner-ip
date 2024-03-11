@@ -1,6 +1,6 @@
 !['Github Actions'](./branding/actions.png)
 
-[![codecov](https://codecov.io/gh/candidob/get-runner-ip/graph/badge.svg?token=3DQIY2JWK5)](https://codecov.io/gh/candidob/get-runner-ip) [![Maintainability](https://codeclimate.com/github/candidob/get-runner-ip.png)](https://codeclimate.com/github/candidob/get-runner-ip) ![Deploy](https://github.com/candidob/get-runner-ip/actions/workflows/main.yml/badge.svg)
+[![codecov](https://codecov.io/gh/candidob/get-runner-ip/graph/badge.svg?token=3DQIY2JWK5)](https://codecov.io/gh/candidob/get-runner-ip) [![Maintainability](https://codeclimate.com/github/candidob/get-runner-ip.png)](https://codeclimate.com/github/candidob/get-runner-ip) [![Deploy](https://github.com/candidob/get-runner-ip/actions/workflows/main.yml/badge.svg)](https://github.com/candidob/get-runner-ip/actions)
 
 # Github Actions Runner IP Addresses
 
